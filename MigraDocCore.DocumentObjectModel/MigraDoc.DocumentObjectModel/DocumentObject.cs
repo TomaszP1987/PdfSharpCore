@@ -92,7 +92,7 @@ namespace MigraDocCore.DocumentObjectModel
     /// <summary>
     /// Gets the parent object.
     /// </summary>
-    internal DocumentObject Parent
+    public DocumentObject Parent
     {
       get { return this.parent; }
     }
