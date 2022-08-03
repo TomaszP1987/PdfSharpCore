@@ -41,40 +41,40 @@ namespace MigraDocCore.Rendering
   /// <summary>
   /// Formatting information for tables.
   /// </summary>
-  internal class TableFormatInfo : FormatInfo
+  public class TableFormatInfo : FormatInfo
   {
-    internal TableFormatInfo()
+    public TableFormatInfo()
     {
     }
 
-    internal override bool EndingIsComplete
+    public override bool EndingIsComplete
     {
       get { return this.isEnding; }
     }
 
 
-    internal override bool StartingIsComplete
+    public override bool StartingIsComplete
     {
       get { return !this.IsEmpty && this.startRow > this.lastHeaderRow; }
     }
 
-    internal override bool IsComplete
+    public override bool IsComplete
     {
       get { return false; }
     }
 
-    internal override bool IsEmpty
+    public override bool IsEmpty
     {
       get { return this.startRow < 0; }
     }
 
-    internal override bool IsEnding
+    public override bool IsEnding
     {
       get { return this.isEnding; }
     }
-    internal bool isEnding;
+    public bool isEnding;
 
-    internal override bool IsStarting
+    public override bool IsStarting
     {
       get
       {
@@ -82,16 +82,16 @@ namespace MigraDocCore.Rendering
       }
     }
 
-    internal int startColumn = -1;
-    internal int endColumn = -1;
+    public int startColumn = -1;
+    public int endColumn = -1;
 
-    internal int startRow = -1;
-    internal int endRow = -1;
+    public int startRow = -1;
+    public int endRow = -1;
 
-    internal int lastHeaderRow = -1;
-    internal SortedList<Cell, FormattedCell> formattedCells;
-    internal MergedCellList mergedCells;
-    internal SortedList<int, XUnit> bottomBorderMap;
-    internal SortedList<int, int> connectedRowsMap;
+    public int lastHeaderRow = -1;
+    public SortedList<Cell, FormattedCell> formattedCells;
+    public MergedCellList mergedCells;
+    public SortedList<int, XUnit> bottomBorderMap;
+    public SortedList<int, int> connectedRowsMap;
   }
 }
