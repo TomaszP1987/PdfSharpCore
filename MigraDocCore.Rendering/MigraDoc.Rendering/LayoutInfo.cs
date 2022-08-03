@@ -36,15 +36,15 @@ namespace MigraDocCore.Rendering
   /// <summary>
   /// Abstract base class to serve as a layoutable unit.
   /// </summary>
-  internal class LayoutInfo
+  public class LayoutInfo
   {
-    internal LayoutInfo()
+    public LayoutInfo()
     {
     }
     /// <summary>
     /// Gets or sets the height necessary to start the document object.
     /// </summary>
-    internal XUnit StartingHeight
+    public XUnit StartingHeight
     {
       get { return this.startingHeight; }
       set { this.startingHeight = value; }
@@ -54,7 +54,7 @@ namespace MigraDocCore.Rendering
     /// <summary>
     /// Gets or sets the height necessary to end the document object.
     /// </summary>
-    internal XUnit TrailingHeight
+    public XUnit TrailingHeight
     {
       get { return this.trailingHeight; }
       set { this.trailingHeight = value; }
@@ -65,7 +65,7 @@ namespace MigraDocCore.Rendering
     /// Indicates whether the document object shall be kept on one page
     /// with its successor.
     /// </summary>
-    internal bool KeepWithNext
+    public bool KeepWithNext
     {
       get { return this.keepWithNext; }
       set { this.keepWithNext = value; }
@@ -75,7 +75,7 @@ namespace MigraDocCore.Rendering
     /// <summary>
     /// Indicates whether the document object shall be kept together on one page.
     /// </summary>
-    internal bool KeepTogether
+    public bool KeepTogether
     {
       get { return this.keepTogether; }
       set { this.keepTogether = value; }
@@ -85,7 +85,7 @@ namespace MigraDocCore.Rendering
     /// <summary>
     /// The space that shall be kept free above the element's content.
     /// </summary>
-    internal virtual XUnit MarginTop
+    public virtual XUnit MarginTop
     {
       get { return this.marginTop; }
       set { this.marginTop = value; }
@@ -95,7 +95,7 @@ namespace MigraDocCore.Rendering
     /// <summary>
     /// The space that shall be kept free right to the element's content.
     /// </summary>
-    internal XUnit MarginRight
+    public XUnit MarginRight
     {
       get { return this.marginRight; }
       set { this.marginRight = value; }
@@ -105,7 +105,7 @@ namespace MigraDocCore.Rendering
     /// <summary>
     /// The space that shall be kept free below the element's content.
     /// </summary>
-    internal XUnit MarginBottom
+    public XUnit MarginBottom
     {
       get { return this.marginBottom; }
       set { this.marginBottom = value; }
@@ -115,7 +115,7 @@ namespace MigraDocCore.Rendering
     /// <summary>
     /// The space that shall be kept free left to the element's content.
     /// </summary>
-    internal XUnit MarginLeft
+    public XUnit MarginLeft
     {
       get { return this.marginLeft; }
       set { this.marginLeft = value; }
@@ -125,7 +125,7 @@ namespace MigraDocCore.Rendering
     /// <summary>
     /// Gets or sets the Area needed by the content (including padding and borders for e.g. paragraphs).
     /// </summary>
-    internal Area ContentArea
+    public Area ContentArea
     {
       get { return this.contentArea; }
       set { this.contentArea = value; }
@@ -136,7 +136,7 @@ namespace MigraDocCore.Rendering
     /// <summary>
     /// Gets or sets the a value indicating whether the element shall appear on a new page.
     /// </summary>
-    internal bool PageBreakBefore
+    public bool PageBreakBefore
     {
       get { return this.pageBreakBefore; }
       set { this.pageBreakBefore = value; }
@@ -148,7 +148,7 @@ namespace MigraDocCore.Rendering
     /// Gets or sets the reference point for horizontal positioning.
     /// </summary>
     /// <remarks>Default value is AreaBoundary.</remarks>
-    internal HorizontalReference HorizontalReference
+    public HorizontalReference HorizontalReference
     {
       get { return this.horizontalReference; }
       set { this.horizontalReference = value; }
@@ -159,7 +159,7 @@ namespace MigraDocCore.Rendering
     /// Gets or sets the reference point for vertical positioning.
     /// </summary>
     /// <remarks>Default value is PreviousElement.</remarks>
-    internal VerticalReference VerticalReference
+    public VerticalReference VerticalReference
     {
       get { return this.verticalReference; }
       set { this.verticalReference = value; }
@@ -170,7 +170,7 @@ namespace MigraDocCore.Rendering
     /// Gets or sets the horizontal alignment of the element.
     /// </summary>
     /// <remarks>Default value is Near.</remarks>
-    internal ElementAlignment HorizontalAlignment
+    public ElementAlignment HorizontalAlignment
     {
       get { return this.horizontalAlignment; }
       set { this.horizontalAlignment = value; }
@@ -181,7 +181,7 @@ namespace MigraDocCore.Rendering
     /// Gets or sets the vertical alignment of the element.
     /// </summary>
     /// <remarks>Default value is Near.</remarks>
-    internal ElementAlignment VerticalAlignment
+    public ElementAlignment VerticalAlignment
     {
       get { return this.verticalAlignment; }
       set { this.verticalAlignment = value; }
@@ -192,7 +192,7 @@ namespace MigraDocCore.Rendering
     /// Gets or sets the floating behavior of surrounding elements.
     /// </summary>
     /// <remarks>Default value is TopBottom.</remarks>
-    internal Floating Floating
+    public Floating Floating
     {
       get { return this.floating; }
       set { this.floating = value; }
@@ -202,7 +202,7 @@ namespace MigraDocCore.Rendering
     /// <summary>
     /// Gets or sets the top position of the element.
     /// </summary>
-    internal XUnit Top
+    public XUnit Top
     {
       get { return this.top; }
       set { this.top = value; }
@@ -212,7 +212,7 @@ namespace MigraDocCore.Rendering
     /// <summary>
     /// Gets or sets the left position of the element.
     /// </summary>
-    internal XUnit Left
+    public XUnit Left
     {
       get { return this.left; }
       set { this.left = value; }
@@ -222,7 +222,7 @@ namespace MigraDocCore.Rendering
     /// <summary>
     /// Gets or sets the minimum width of the element.
     /// </summary>
-    internal XUnit MinWidth
+    public XUnit MinWidth
     {
       get { return this.minWidth; }
       set { this.minWidth = value; }
