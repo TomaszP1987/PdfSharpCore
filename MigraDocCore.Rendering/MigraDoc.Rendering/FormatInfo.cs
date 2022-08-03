@@ -38,12 +38,12 @@ namespace MigraDocCore.Rendering
   /// <summary>
   /// Abstract base class for formatting information received by calling Format() on a renderer.
   /// </summary>
-  internal abstract class FormatInfo
+  public abstract class FormatInfo
   {
     /// <summary>
     /// Indicates that the formatted object is starting.
     /// </summary>
-    internal abstract bool IsStarting
+    public abstract bool IsStarting
     {
       get;
     }
@@ -51,7 +51,7 @@ namespace MigraDocCore.Rendering
     /// <summary>
     /// Indicates that the formatted object is ending.
     /// </summary>
-    internal abstract bool IsEnding
+    public abstract bool IsEnding
     {
       get;
     }
@@ -59,7 +59,7 @@ namespace MigraDocCore.Rendering
     /// <summary>
     /// Indicates that the formatted object is complete.
     /// </summary>
-    internal abstract bool IsComplete
+    public abstract bool IsComplete
     {
       get;
     }
@@ -67,7 +67,7 @@ namespace MigraDocCore.Rendering
     /// <summary>
     /// Indicates that the starting of the element is completed
     /// </summary>
-    internal abstract bool StartingIsComplete
+    public abstract bool StartingIsComplete
     {
       get;
     }
@@ -75,12 +75,12 @@ namespace MigraDocCore.Rendering
     /// <summary>
     /// Indicates that the ending of the element is completed
     /// </summary>
-    internal abstract bool EndingIsComplete
+    public abstract bool EndingIsComplete
     {
       get;
     }
 
-    internal abstract bool IsEmpty
+    public abstract bool IsEmpty
     {
       get;
     }
