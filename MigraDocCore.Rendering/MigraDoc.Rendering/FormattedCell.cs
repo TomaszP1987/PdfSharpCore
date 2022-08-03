@@ -40,9 +40,9 @@ namespace MigraDocCore.Rendering
   /// <summary>
   /// Represents a formatted cell.
   /// </summary>
-  internal class FormattedCell : IAreaProvider
+  public class FormattedCell : IAreaProvider
   {
-    internal FormattedCell(Cell cell, DocumentRenderer documentRenderer, Borders cellBorders, FieldInfos fieldInfos, XUnit xOffset, XUnit yOffset)
+    public FormattedCell(Cell cell, DocumentRenderer documentRenderer, Borders cellBorders, FieldInfos fieldInfos, XUnit xOffset, XUnit yOffset)
     {
       this.cell = cell;
       this.fieldInfos = fieldInfos;
@@ -69,7 +69,7 @@ namespace MigraDocCore.Rendering
       return null;
     }
 
-    internal void Format(XGraphics gfx)
+    public void Format(XGraphics gfx)
     {
       this.gfx = gfx;
       this.formatter = new TopDownFormatter(this, this.documentRenderer, this.cell.Elements);
@@ -89,12 +89,12 @@ namespace MigraDocCore.Rendering
       return new Rectangle(this.xOffset, this.yOffset, width, height);
     }
 
-    internal XUnit ContentHeight
+    public XUnit ContentHeight
     {
       get { return this.contentHeight; }
     }
 
-    internal XUnit InnerHeight
+    public XUnit InnerHeight
     {
       get
       {
@@ -117,7 +117,7 @@ namespace MigraDocCore.Rendering
       }
     }
 
-    internal XUnit InnerWidth
+    public XUnit InnerWidth
     {
       get
       {
@@ -176,7 +176,7 @@ namespace MigraDocCore.Rendering
 
     XUnit contentHeight = 0;
 
-    internal RenderInfo[] GetRenderInfos()
+    public RenderInfo[] GetRenderInfos()
     {
       if (this.renderInfos != null)
         return (RenderInfo[])this.renderInfos.ToArray(typeof(RenderInfo));
